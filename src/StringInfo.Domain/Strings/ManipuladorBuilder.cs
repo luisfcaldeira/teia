@@ -7,10 +7,10 @@ namespace StringInfo.Domain.Strings
         public static AbstractManipulador GetManipulador(string texto)
         {
             var manipulador = new Manipulador(texto);
-            return new LowerCaseDecorator(
+            return new RemoveCaracteresEspeciaisEPontuacaoDecorator(
                             new RemoveEspacosDecorator(
                                 new RemoverAcentosDecorator(
-                                    new RemoveCaracteresEspeciaisEPontuacaoDecorator(manipulador)
+                                    new LowerCaseDecorator(manipulador)
                                     )
                                 )
                             );

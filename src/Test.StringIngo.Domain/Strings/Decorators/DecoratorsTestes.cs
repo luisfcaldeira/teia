@@ -55,5 +55,6 @@ namespace Test.StringIngo.Domain.Strings.Decorators
             Assert.AreNotEqual(textoBase, decorator.GetTextoLimpo());
             Assert.AreEqual(textoLimpo , decorator.GetTextoLimpo());
         }
+
     }
 }
